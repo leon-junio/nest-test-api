@@ -46,5 +46,14 @@ describe('CompanyController', () => {
           }),
         ).toBeInstanceOf(Object);
     });
+    it('should return {Company[]} object', () => {
+      companyController.create({
+        name: 'test',
+        description: 'test',
+        cnpj: 'test',
+        active: true,
+      }),
+        expect(companyController.delete(1)).toBeInstanceOf(Object);
+    });
   });
 });
